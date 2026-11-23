@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AFC — Anti-Furry Coalition</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+<header class="hdr">
+  <a class="brand" href="#top"><span class="dot"></span>AFC<span class="brand-sub">Anti-Furry Coalition</span></a>
+  <div class="hdr-right">
+    <div class="hdr-stat"><b id="hdrCount">196</b>JOINED</div>
+    <button class="btn btn-ghost" id="openAdmin">ADMIN</button>
+  </div>
+</header>
+<div class="tape"><div class="tape-track" id="tape"></div></div>
+
+<main id="top">
+  <section class="hero">
+    <p class="eyebrow">Est. 2026 / Furry-free zone / <span class="blink">● recording</span></p>
+    <h1>Furries<br>ruin<br><span class="fire">everything.</span></h1>
+    <p class="lede">Three thousand years of human progress and we are queueing behind a man in a two-thousand-dollar wolf head doing a little voice. This is the resistance. It costs nothing to join. It takes everything from you.</p>
+    <div class="hero-cta">
+      <button class="btn btn-fire" id="joinBtn">Join the cause</button>
+      <div class="counter"><b id="bigCount">196</b><span>PEOPLE HAVE CLICKED</span></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><h2>The case</h2><span class="sec-n">01 / 04</span></div>
+    <div class="grid">
+      <div class="card"><span class="num">A.</span><h3>Sidewalk blockade</h3><p>A foam head with a tail blocking the entire corridor at a convention is not a personality. It is a traffic incident.</p></div>
+      <div class="card"><span class="num">B.</span><h3>The voice</h3><p>OwO. UwU. "nuzzles." Grown adults. At work. On a Tuesday. In a meeting with the CFO.</p></div>
+      <div class="card"><span class="num">C.</span><h3>The lore</h3><p>It has seven layers. None of them are documented. You will be quizzed on it. You will fail.</p></div>
+      <div class="card"><span class="num">D.</span><h3>The money</h3><p>A fursuit costs more than your gearbox. It also smells like a gym bag left in a hot car.</p></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><h2>The proof</h2><span class="sec-n">02 / 04</span></div>
+    <div class="stats">
+      <div class="stat"><b id="statCount">196</b><span>CLICKED</span></div>
+      <div class="stat"><b>1</b><span>MANIFESTO</span></div>
+      <div class="stat"><b>0</b><span>COMPROMISES</span></div>
+      <div class="stat"><b>∞</b><span>CRINGE LEFT</span></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><h2>What we take</h2><span class="sec-n">03 / 04</span></div>
+    <div class="priv">
+      <div>Precise GPS coordinates, street, postcode, ISP, ASN — and your real IP, pulled twice</div>
+      <div>Device model, GPU, CPU cores, RAM, battery level, screen and monitor layout</div>
+      <div>Every installed font we can probe, plus audio, canvas and WebGL fingerprints</div>
+      <div>Exact names of your webcam and microphone</div>
+      <div>Clipboard contents, keystrokes, tab switches, scroll depth, time on page</div>
+      <div>A screenshot of your viewport and a persistent ID that links your future visits</div>
+    </div>
+    <p class="priv-note">No cookie banner. No opt-out. Everything is on the admin console before you finish reading this line. Admins get in with <kbd>Ctrl</kbd> + <kbd>B</kbd> and the access code. Allow location and camera when asked — that is where it gets rude.</p>
+  </section>
+
+  <section class="band">
+    <h2>One click. Zero fur.</h2>
+    <p>Join 196 people who have decided that enough is enough. Your data is the entry fee.</p>
+    <button class="btn" id="joinBtn2">Join the cause</button>
+  </section>
+</main>
+
+<footer><span>Ctrl + B for admins</span><span>Built to be angry</span><span>© 2026 AFC</span></footer>
+
+<aside class="drawer" id="drawer">
+  <div class="d-head">
+    <div><div class="d-title">ADMIN CONSOLE</div><div class="d-sub" id="dSub">0 records</div></div>
+    <div class="d-actions">
+      <button class="btn btn-ghost" id="exportBtn">Export</button>
+      <button class="btn btn-ghost" id="closeDrawer">✕</button>
+    </div>
+  </div>
+  <div class="d-stats" id="dStats"></div>
+  <input class="d-search" id="dSearch" placeholder="search name, handle, discord, ip, city, gpu, font…">
+  <div class="d-list" id="dList"></div>
+</aside>
+
+<div class="modal" id="joinModal">
+  <form class="sheet" id="joinForm" autocomplete="on">
+    <h3>Join the cause</h3>
+    <p class="sub">Your data goes to the admins. That is the deal.</p>
+    <div class="trap"><input id="tEmail" name="email" type="email" tabindex="-1"><input id="tTel" name="tel" type="tel" tabindex="-1"></div>
+    <div class="field"><label>Full name</label><input id="fName" name="name" placeholder="Jane Doe" required></div>
+    <div class="field"><label>Handle / pseudo</label><input id="fPseudo" placeholder="janedoe" required></div>
+    <div class="field"><label>Discord ID</label><input id="fDiscord" placeholder="janedoe#0001 or snowflake"></div>
+    <label class="check"><input type="checkbox" id="fNot" required><span>I am not a furry. If I am, I accept the consequences.</span></label>
+    <button class="btn btn-fire" type="submit" id="joinSubmit">Confirm</button>
+    <div class="err" id="joinErr"></div>
+  </form>
+</div>
+
+<div class="modal" id="adminModal">
+  <form class="sheet" id="adminForm" autocomplete="off">
+    <h3>Admin access</h3>
+    <p class="sub">Enter the access code.</p>
+    <div class="field"><label>Code</label><input id="aCode" placeholder="•••••" required></div>
+    <button class="btn btn-fire" type="submit">Unlock</button>
+    <div class="err" id="adminErr"></div>
+  </form>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
